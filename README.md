@@ -81,8 +81,57 @@ wsolToken.transferSolana(solanaATA, uint64(amount)); // WSOL transfer to Solana
 
 ---
 
+
+
+---
+
 ## ✅ Test Highlights
 
+![✅ Passing Tests Screenshot](images/screenshot.png)
+
+Successfully passed most test cases — see the screenshot above and breakdown below:
+
+### 🔐 **Lock Contract Tests**
+
+#### 🚀 Deployment
+
+* [x] Should set the right unlockTime *(110ms)*
+* [x] Should set the right owner
+* [x] Should receive and store the funds to lock
+* [x] Should fail if the unlockTime is not in the future
+
+#### 💸 Withdrawals
+
+**🧪 Validations**
+
+* [x] Should revert with the right error if called too soon
+* [x] Should revert with the right error if called from another account
+* [x] Shouldn't fail if the unlockTime has arrived and the owner calls it
+
+**📡 Events**
+
+* [x] Should emit an event on withdrawals
+
+**💰 Transfers**
+
+* [x] Should transfer the funds to the owner
+
+---
+
+### 🧪 Test Setup Summary
+
+* [x] Hardhat + Ignition deployment
+* [x] Event assertions for staking, claiming, unstaking
+* [x] WSOL/USDC SPL token mock simulation
+* [x] Phantom-compatible E2E tests via frontend
+
+---
+
+Let me know if you want each test category collapsed/expandable or color-coded with shields/badges.
+
+
+
+successfully passed most of the test cases.. Check the images folder
 * ✔️ Hardhat + Ignition deployment
 * ✔️ Event assertions for staking, claiming, unstaking
 * ✔️ WSOL/USDC SPL token mock simulation
