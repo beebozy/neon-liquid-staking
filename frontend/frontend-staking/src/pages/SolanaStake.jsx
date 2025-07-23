@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSolanaNative } from '../components/SolanaNativeProvider';
 import { getContractAddress, validateStakeAmount, parseTokenAmount, formatTokenAmount } from '../config/neonConfig';
-
+// const { erc20Abi, toFullAmount } = require('@neonevm/token-transfer-core');
+// const { Contract, Interface, JsonRpcProvider, parseUnits } = require('ethers');
+// const { liquidStakingAbi } = require('../data/liquidStakingAbi');
+// const { CSPLToken, StakeData } = require('../models');
 export default function SolanaStake() {
     const {
         connected,
